@@ -1,7 +1,7 @@
 import Input from "./components/Input";
 import Nav from "./components/Nav";
 import "./App.css";
-import { FcHeadset } from "react-icons/fc";
+import { FaPhoneAlt, FaLock } from "react-icons/fa";
 
 function App() {
   const navLinks = ["typography", "grid", "buttons", "inputs"];
@@ -91,23 +91,37 @@ function App() {
           </div>
         </div>
         {/* 2 input fields with icons */}
-        <div className="twoItemsRow">
-          <Input
-            inputType="normal"
-            titleText="<Input startIcon />"
-            headerText="Label"
-            footerText="Some interesting text"
-            placeHolderText="Placeholder"
-          />
-          <div className="secondChildComponent">
-            <Input
-              className="secondChildComponent"
-              inputType="normal"
-              titleText="<Input endIcon />"
-              headerText="Label"
-              footerText="Some interesting text"
-              placeHolderText="Placeholder"
-            />
+        <div className="twoItemsRow inputsWithIcon">
+          <div className="icon-input-container">
+            <span className="icon-left">
+              <FaPhoneAlt />
+            </span>
+            <div className="input">
+              <Input
+                inputType="normal"
+                titleText="<Input startIcon />"
+                headerText="Label"
+                footerText="Some interesting text"
+                placeHolderText="               Placeholder"
+              />
+            </div>
+          </div>
+          <div className="secondChildComponent secondChildComponentWithIcon">
+            <div className="icon-input-container">
+              <div className="input">
+                <Input
+                  className="secondChildComponent"
+                  inputType="normal"
+                  titleText="<Input endIcon />"
+                  headerText="Label"
+                  footerText="Some interesting text"
+                  placeHolderText="  Placeholder"
+                />
+              </div>
+              <span className="icon-right">
+                <FaLock />
+              </span>
+            </div>
           </div>
         </div>
         {/* Text Input Value */}

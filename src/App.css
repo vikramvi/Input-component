@@ -57,9 +57,39 @@
 .twoItemsRow {
   display: flex;
   justify-content: flex-start;
-  margin-left: 4rem;
+  margin-left: 3.5rem;
+}
+
+.inputsWithIcon {
+  margin-left: 0rem;
+}
+
+.icon-input-container {
+  position: relative;
+}
+
+.icon-left {
+  position: absolute;
+  left: 5rem;
+  top: 4.8rem;
+  font-size: 1.5rem;
+}
+
+.icon-right {
+  position: absolute;
+  left: 14rem;
+  top: 4.8rem;
+  font-size: 1.5rem;
+}
+
+.input {
+  margin-left: 3.5rem;
 }
 
 .secondChildComponent {
-  margin-left: 10rem;
+  margin-left: 6rem;
+}
+
+.secondChildComponentWithIcon {
+  margin-left: 2.5rem;
 }
