@@ -9,20 +9,22 @@ function App() {
   return (
     <div className="container">
       <div className="nav-section">
+        <span className="logo">
+          <span className="orange">Dev</span>
+          <span>challenges.io</span>
+        </span>
         <Nav links={navLinks} />
       </div>
       <div className="content-section">
         {/* Normal Input */}
         <div className="threeItemsRow">
           <Input
-            className="item"
             inputType="normal"
             titleText="<Input />"
             headerText="Label"
             placeHolderText="Placeholder"
           />
           <Input
-            className="item"
             inputType="normal"
             titleText="&:hover"
             headerText="Label"
@@ -30,7 +32,6 @@ function App() {
             placeHolderText="Placeholder"
           />
           <Input
-            className="item"
             inputType="normal"
             titleText="&:focus"
             headerText="Label"
@@ -41,14 +42,12 @@ function App() {
         {/* Error Input */}
         <div className="threeItemsRow">
           <Input
-            className="item"
             inputType="error"
             titleText="<Input error />"
             headerText="Label"
             placeHolderText="Placeholder"
           />
           <Input
-            className="item"
             inputType="error"
             titleText="&:hover"
             headerText="Label"
@@ -56,7 +55,6 @@ function App() {
             placeHolderText="Placeholder"
           />
           <Input
-            className="item"
             inputType="error"
             titleText="&:focus"
             headerText="Label"
@@ -65,9 +63,8 @@ function App() {
           />
         </div>
         {/* Disabled Input */}
-        <div>
+        <div className="singleItemRow">
           <Input
-            className="item"
             inputType="normal"
             titleText="<Input disabled />"
             headerText="Label"
@@ -77,45 +74,45 @@ function App() {
         {/* 2 Buttons with some interestint text */}
         <div className="twoItemsRow">
           <Input
-            className="item"
             inputType="normal"
             titleText="<Input helperText=”Some interesting text” />"
             headerText="Label"
             footerText="Some interesting text"
             placeHolderText="Placeholder"
           />
-          <Input
-            className="item"
-            inputType="error"
-            titleText="<Input helperText=”Some interesting text” error />"
-            headerText="Label"
-            footerText="Some interesting text"
-            placeHolderText="Placeholder"
-          />
+          <div className="secondChildComponent">
+            <Input
+              inputType="error"
+              titleText="<Input helperText=”Some interesting text” error />"
+              headerText="Label"
+              footerText="Some interesting text"
+              placeHolderText="Placeholder"
+            />
+          </div>
         </div>
         {/* 2 input fields with icons */}
         <div className="twoItemsRow">
           <Input
-            className="item"
             inputType="normal"
             titleText="<Input startIcon />"
             headerText="Label"
             footerText="Some interesting text"
             placeHolderText="Placeholder"
           />
-          <Input
-            className="item"
-            inputType="normal"
-            titleText="<Input endIcon />"
-            headerText="Label"
-            footerText="Some interesting text"
-            placeHolderText="Placeholder"
-          />
+          <div className="secondChildComponent">
+            <Input
+              className="secondChildComponent"
+              inputType="normal"
+              titleText="<Input endIcon />"
+              headerText="Label"
+              footerText="Some interesting text"
+              placeHolderText="Placeholder"
+            />
+          </div>
         </div>
         {/* Text Input Value */}
-        <div>
+        <div className="singleItemRow">
           <Input
-            className="item"
             inputType="normal"
             titleText="<Input value=”text” />"
             headerText="Label"
@@ -125,26 +122,26 @@ function App() {
         {/* 2 inputs fields of different sizes */}
         <div className="twoItemsRow">
           <Input
-            className="item"
             inputType="normal"
             titleText="<Input size=”sm” />"
             headerText="Label"
             placeHolderText="Placeholder"
             size="small"
           />
-          <Input
-            className="item"
-            inputType="normal"
-            titleText="<Input size=”md” />"
-            headerText="Label"
-            placeHolderText="Placeholder"
-            size="large"
-          />
+          <div className="secondChildComponent">
+            <Input
+              className="secondChildComponent"
+              inputType="normal"
+              titleText="<Input size=”md” />"
+              headerText="Label"
+              placeHolderText="Placeholder"
+              size="large"
+            />
+          </div>
         </div>
         {/* Full width input */}
-        <div>
+        <div className="singleItemRow">
           <Input
-            className="item"
             inputType="normal"
             titleText="<Input fullWidth />"
             headerText="Label"
@@ -153,9 +150,8 @@ function App() {
           />
         </div>
         {/* Multiple Row Input */}
-        <div>
+        <div className="singleItemRow">
           <Input
-            className="item"
             inputType="normal"
             titleText="<Input multiline row=”4” />"
             headerText="Label"

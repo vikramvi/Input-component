@@ -1,16 +1,65 @@
+:root {
+  --orange-color: #f7542e;
+  --active-color: 9, 15, 49;
+
+  --primary-color: 41, 98, 255;
+  --secondary-color: 69, 90, 100;
+  --danger-color: 211, 47, 47;
+  --default-color: 224, 224, 224;
+  --disabled-color: 158, 158, 158;
+
+  --primary-hover-color: 0, 57, 203;
+  --secondary-hover-color: 28, 49, 58;
+  --danger-hover-color: 154, 0, 7;
+  --default-hover-color: 174, 174, 174;
+  --text-hover-color: 41, 98, 255;
+
+  --default-text-color: 63, 63, 63;
+  --hover-text-color: 130, 130, 130;
+  --footer-text-color: 169, 169, 169;
+
+  --title-color: 79, 79, 79;
+  --background-color: 250, 251, 253;
+}
+
 .container {
   display: flex;
 }
 
 .nav-section {
   flex: 15%;
+  padding: 3rem;
+  background: rgba(var(--background-color), 1);
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--active-color);
+  font-family: Poppins;
+}
+
+.orange {
+  color: var(--orange-color);
 }
 
 .content-section {
   flex: 85%;
 }
 
-.threeItemsRow,
+.threeItemsRow {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.singleItemRow,
 .twoItemsRow {
   display: flex;
+  justify-content: flex-start;
+  margin-left: 4rem;
+}
+
+.secondChildComponent {
+  margin-left: 10rem;
 }
