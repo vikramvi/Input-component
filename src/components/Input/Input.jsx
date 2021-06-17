@@ -8,7 +8,7 @@ const Input = ({
   headerText,
   footerText,
   titleText,
-  size = "defaultSizeInput",
+  size,
   ...props
 }) => {
   const [isHover, setIsHover] = useState(false);
@@ -21,12 +21,16 @@ const Input = ({
   };
 
   const errorStyle = {
-    border: "thin dotted red",
+    border: "1px solid #D32F2F",
   };
 
   const normalBtnStyle = {
     borderRadius: "8px",
-    border: "thin dotted green",
+    border: "1px solid #828282",
+  };
+
+  const disabledStyle = {
+    background: "#F2F2F2",
   };
 
   //Input Size
@@ -46,8 +50,8 @@ const Input = ({
   };
 
   const fullWidthInput = {
-    width: "200px",
-    height: "150px",
+    width: "900px",
+    height: "66px",
   };
 
   const multirowSizeInput = {
@@ -70,6 +74,9 @@ const Input = ({
     case "error":
       inputStyle = errorStyle;
       break;
+    case "disabled":
+      inputStyle = disabledStyle;
+      break;
     default:
       inputStyle = normalBtnStyle;
       break;
@@ -83,7 +90,7 @@ const Input = ({
     case "large":
       inputSize = largeSizeInput;
       break;
-    case "fullWidth":
+    case "fullwidth":
       inputSize = fullWidthInput;
       break;
     case "multirow":
