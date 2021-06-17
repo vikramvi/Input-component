@@ -16,6 +16,7 @@ function App() {
         <Nav links={navLinks} />
       </div>
       <div className="content-section">
+        <p className="content-title">Inputs</p>
         {/* Normal Input */}
         <div className="threeItemsRow">
           <Input
@@ -65,7 +66,7 @@ function App() {
         {/* Disabled Input */}
         <div className="singleItemRow">
           <Input
-            inputType="normal"
+            inputType="disabled"
             titleText="<Input disabled />"
             headerText="Label"
             placeHolderText="Placeholder"
@@ -172,6 +173,18 @@ function App() {
             placeHolderText="Text"
             size="multirow"
           />
+        </div>
+        <div>
+          <p className="footer-text">
+            <span>created by </span>
+            <a
+              href="https://devchallenges.io/portfolio/vikramvi"
+              target="_blank"
+            >
+              vikramvi
+            </a>
+            <span> - devChallenges.io </span>
+          </p>
         </div>
       </div>
     </div>
