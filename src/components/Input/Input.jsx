@@ -21,7 +21,7 @@ const Input = ({
   };
 
   const outlineHoverStyle = {
-    border: "3px solid blue",
+    border: "0.18rem solid blue",
     cursor: "default",
   };
 
@@ -31,12 +31,12 @@ const Input = ({
   };
 
   const errorStyle = {
-    border: "1px solid #D32F2F",
+    border: "0.0625rem solid #D32F2F",
   };
 
   const normalBtnStyle = {
-    borderRadius: "8px",
-    border: "1px solid #828282",
+    borderRadius: "0.5rem",
+    border: "0.0625rem solid #828282",
   };
 
   const disabledStyle = {
@@ -45,28 +45,28 @@ const Input = ({
 
   //Input Size
   const defaultSizeInput = {
-    width: "200px",
-    height: "56px",
+    width: "12.5rem",
+    height: "3.5rem",
   };
 
   const smallSizeInput = {
-    width: "200px",
-    height: "40px",
+    width: "12.5rem",
+    height: "2.5rem",
   };
 
   const largeSizeInput = {
-    width: "250px",
-    height: "66px",
+    width: "15.625rem",
+    height: "4rem",
   };
 
   const fullWidthInput = {
-    width: "900px",
-    height: "66px",
+    width: "56.25rem",
+    height: "4rem",
   };
 
   const multirowSizeInput = {
-    width: "200px",
-    height: "150px",
+    width: "12.5rem",
+    height: "9.375rem",
   };
 
   let inputStyle;
@@ -118,7 +118,7 @@ const Input = ({
   return (
     <div className={styles.input}>
       <p className="titleText">{titleText}</p>
-      <p>{headerText}</p>
+      <p className={`test ${inputType}`}>{headerText}</p>
       <input
         type="text"
         style={{ ...normalBtnStyle, ...inputSize, ...inputStyle }}

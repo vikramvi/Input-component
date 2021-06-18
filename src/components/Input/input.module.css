@@ -12,6 +12,10 @@ p:nth-of-type(1) {
   font-family: Ubuntu Mono;
 }
 
+.test {
+  color: red;
+}
+
 p:nth-of-type(2) {
   width: 2rem;
   height: 1rem;
