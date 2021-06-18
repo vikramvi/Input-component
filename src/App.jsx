@@ -1,7 +1,7 @@
 import Input from "./components/Input";
 import Nav from "./components/Nav";
 import "./App.css";
-import { FaPhoneAlt, FaLock } from "react-icons/fa";
+import { FiPhone, FiLock } from "react-icons/fi";
 
 function App() {
   const navLinks = ["typography", "grid", "buttons", "inputs"];
@@ -95,7 +95,7 @@ function App() {
         <div className="twoItemsRow inputsWithIcon">
           <div className="icon-input-container">
             <span className="icon-left">
-              <FaPhoneAlt />
+              <FiPhone />
             </span>
             <div className="input">
               <Input
@@ -120,7 +120,7 @@ function App() {
                 />
               </div>
               <span className="icon-right">
-                <FaLock />
+                <FiLock />
               </span>
             </div>
           </div>
@@ -180,6 +180,7 @@ function App() {
             <a
               href="https://devchallenges.io/portfolio/vikramvi"
               target="_blank"
+              rel="noreferrer"
             >
               vikramvi
             </a>
