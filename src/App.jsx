@@ -7,15 +7,15 @@ function App() {
   const navLinks = ["typography", "grid", "buttons", "inputs"];
 
   return (
-    <div className="container">
-      <div className="nav-section">
+    <main className="container">
+      <aside className="nav-section">
         <span className="logo">
           <span className="orange">Dev</span>
           <span>challenges.io</span>
         </span>
         <Nav links={navLinks} />
-      </div>
-      <div className="content-section">
+      </aside>
+      <section className="content-section">
         <p className="content-title">Inputs</p>
         {/* Normal Input */}
         <div className="threeItemsRow">
@@ -174,7 +174,7 @@ function App() {
             size="multirow"
           />
         </div>
-        <div>
+        <footer>
           <p className="footer-text">
             <span>created by </span>
             <a
@@ -185,9 +185,9 @@ function App() {
             </a>
             <span> - devChallenges.io </span>
           </p>
-        </div>
-      </div>
-    </div>
+        </footer>
+      </section>
+    </main>
   );
 }
 
