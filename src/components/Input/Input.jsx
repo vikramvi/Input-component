@@ -3,7 +3,6 @@ import styles from "./input.module.css";
 
 const Input = ({
   inputType,
-  effect,
   placeHolderText,
   headerText,
   footerText,
@@ -16,8 +15,19 @@ const Input = ({
     setIsHover(!isHover);
   };
 
+  const [isFocus, setIsFocus] = useState(false);
+  const toggleFocus = () => {
+    setIsFocus(!isFocus);
+  };
+
   const outlineHoverStyle = {
-    backgroundColor: "green",
+    border: "3px solid blue",
+    cursor: "default",
+  };
+
+  const outlineFocusStyle = {
+    border: "thick double blue",
+    cursor: "default",
   };
 
   const errorStyle = {
@@ -64,11 +74,15 @@ const Input = ({
     case "hover":
       if (isHover) {
         inputStyle = outlineHoverStyle;
+      } else {
+        inputStyle = normalBtnStyle;
       }
       break;
     case "focus":
-      if (isHover) {
-        inputStyle = outlineHoverStyle;
+      if (isFocus) {
+        inputStyle = outlineFocusStyle;
+      } else {
+        inputStyle = normalBtnStyle;
       }
       break;
     case "error":
@@ -110,8 +124,8 @@ const Input = ({
         style={{ ...normalBtnStyle, ...inputSize, ...inputStyle }}
         onMouseEnter={toggleHover}
         onMouseLeave={toggleHover}
-        onFocus={toggleHover}
-        onBlur={toggleHover}
+        onFocus={toggleFocus}
+        onBlur={toggleFocus}
         placeholder={placeHolderText}
       />
       <p>{footerText}</p>

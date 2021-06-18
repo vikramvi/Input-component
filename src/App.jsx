@@ -26,17 +26,15 @@ function App() {
             placeHolderText="Placeholder"
           />
           <Input
-            inputType="normal"
+            inputType="hover"
             titleText="&:hover"
             headerText="Label"
-            inputEffect="hover"
             placeHolderText="Placeholder"
           />
           <Input
-            inputType="normal"
+            inputType="focus"
             titleText="&:focus"
             headerText="Label"
-            inputEffect="focus"
             placeHolderText="Placeholder"
           />
         </div>
