@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./input.module.css";
+import Styles from "./input.module.css";
 
 const Input = ({
   inputType,
@@ -25,8 +25,18 @@ const Input = ({
     cursor: "default",
   };
 
+  const outlineErrorHoverStyle = {
+    border: "0.18rem solid red",
+    cursor: "default",
+  };
+
   const outlineFocusStyle = {
     border: "thick double blue",
+    cursor: "default",
+  };
+
+  const outlineErrorFocusStyle = {
+    border: "thick double red",
     cursor: "default",
   };
 
@@ -88,6 +98,20 @@ const Input = ({
     case "error":
       inputStyle = errorStyle;
       break;
+    case "error-hover":
+      if (isHover) {
+        inputStyle = outlineErrorHoverStyle;
+      } else {
+        inputStyle = normalBtnStyle;
+      }
+      break;
+    case "error-focus":
+      if (isFocus) {
+        inputStyle = outlineErrorFocusStyle;
+      } else {
+        inputStyle = normalBtnStyle;
+      }
+      break;
     case "disabled":
       inputStyle = disabledStyle;
       break;
@@ -116,9 +140,11 @@ const Input = ({
   }
 
   return (
-    <div className={styles.input}>
-      <p className="titleText">{titleText}</p>
-      <p className={`test ${inputType}`}>{headerText}</p>
+    <div className={Styles.input}>
+      <p className={Styles.titleText}>{titleText}</p>
+      <p className={inputType === "error" ? Styles.error : Styles.headerText}>
+        {headerText}
+      </p>
       <input
         type="text"
         style={{ ...normalBtnStyle, ...inputSize, ...inputStyle }}
@@ -128,7 +154,7 @@ const Input = ({
         onBlur={toggleFocus}
         placeholder={placeHolderText}
       />
-      <p>{footerText}</p>
+      <p className={Styles.footerText}>{footerText}</p>
     </div>
   );
 };

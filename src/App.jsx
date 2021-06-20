@@ -47,14 +47,14 @@ function App() {
             placeHolderText="Placeholder"
           />
           <Input
-            inputType="error"
+            inputType="error-hover"
             titleText="&:hover"
             headerText="Label"
             inputEffect="hover"
             placeHolderText="Placeholder"
           />
           <Input
-            inputType="error"
+            inputType="error-focus"
             titleText="&:focus"
             headerText="Label"
             inputEffect="focus"

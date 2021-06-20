@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-p:nth-of-type(1) {
+.titleText {
   width: 19rem;
   height: 0.75rem;
   font-size: 0.75rem;
@@ -12,11 +12,16 @@ p:nth-of-type(1) {
   font-family: Ubuntu Mono;
 }
 
-.test {
+.error {
+  width: 2rem;
+  height: 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: Noto Sans JP;
   color: red;
 }
 
-p:nth-of-type(2) {
+.headerText {
   width: 2rem;
   height: 1rem;
   font-size: 0.75rem;
@@ -25,7 +30,7 @@ p:nth-of-type(2) {
   font-family: Noto Sans JP;
 }
 
-p:nth-of-type(3) {
+.footerText {
   width: 6.2rem;
   height: 0.9rem;
   font-size: 0.625rem;
